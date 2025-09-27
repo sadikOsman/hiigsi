@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Forex Mentorship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #181f2a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 8px #2563eb22;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            gap: 32px;
+        }
+        .logo {
+            margin-right: 32px;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #181f2a;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            position: absolute;
+            right: 24px;
+            top: 18px;
+            width: 32px;
+            height: 32px;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            height: 4px;
+            width: 24px;
+            background: #2563eb;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        @media (max-width: 900px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 85vw;
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                display: none;
+                box-shadow: 0 2px 8px #2563eb22;
+                z-index: 999;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .mentorship-hero {
+            text-align: center;
+            padding: 80px 12px 36px 12px;
+        }
+        .mentorship-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .mentorship-hero p {
+            font-size: 1.25rem;
+            color: #2563eb;
+            margin-bottom: 24px;
+        }
+        .mentorship-actions {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .register-btn, .waitlist-btn {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 36px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #2563eb22;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .register-btn[disabled] {
+            background: #e0e8ef;
+            color: #2563eb;
+            cursor: not-allowed;
+        }
+        .waitlist-btn:hover {
+            background: #1d4ed8;
+        }
+        .mentorship-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .mentorship-stat {
+            background: #e0e8ef;
+            color: #2563eb;
+            border-radius: 12px;
+            padding: 18px 36px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            box-shadow: 0 2px 12px #2563eb22;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .mentorship-stat i {
+            color: #2563eb;
+            font-size: 1.3em;
+        }
+        .course-image-hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 32px 0 0 0;
+        }
+        .course-image-hero img {
+            max-width: 420px;
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px #2563eb22;
+            background: #e0e8ef;
+        }
+        .mentorship-features {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 32px;
+            margin: 40px auto 48px auto;
+            max-width: 1100px;
+        }
+        .feature-card {
+            background: #e0e8ef;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px #2563eb22;
+            padding: 32px 24px;
+            min-width: 220px;
+            max-width: 340px;
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .feature-card .icon {
+            color: #fff;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.3rem;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 8px #2563eb22;
+        }
+        .feature-card h3 {
+            color: #2563eb;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #374151;
+            font-size: 1.05rem;
+        }
+        @media (max-width: 900px) {
+            .navbar .container {
+                flex-direction: row;
+                height: 60px;
+            }
+            .mentorship-hero {
+                padding: 48px 4vw 24px 4vw;
+            }
+            .mentorship-hero h1 {
+                font-size: 2rem;
+            }
+            .mentorship-hero p {
+                font-size: 1.08rem;
+            }
+            .mentorship-actions {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+            .register-btn, .waitlist-btn {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+            .mentorship-stats {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+            .mentorship-stat {
+                padding: 12px 18px;
+                font-size: 1rem;
+            }
+            .course-image-hero {
+                margin: 24px 0 0 0;
+            }
+            .course-image-hero img {
+                max-width: 98vw;
+                border-radius: 12px;
+            }
+            .mentorship-features {
+                flex-direction: column;
+                gap: 18px;
+                width: 92vw;
+                margin: 32px auto 32px auto;
+                align-items: stretch;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                box-sizing: border-box;
+            }
+            .feature-card {
+                min-width: 0;
+                max-width: 100%;
+                width: 100%;
+                margin: 0 auto;
+                padding: 20px 8px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+        function showWaitlistModal() {
+            let modalBg = document.getElementById('modalBg');
+            if (!modalBg) {
+                modalBg = document.createElement('div');
+                modalBg.id = 'modalBg';
+                document.body.appendChild(modalBg);
+            }
+            modalBg.innerHTML = `
+                <div class='modal-bg' style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(37,99,235,0.18);z-index:1000;display:flex;align-items:center;justify-content:center;">
+                    <div class='waitlist-modal' style="background:#fff;border-radius:18px;box-shadow:0 8px 32px #2563eb22;padding:32px 28px 24px 28px;max-width:350px;width:100%;text-align:center;position:relative;">
+                        <div style="position:absolute;top:18px;right:18px;cursor:pointer;font-size:1.3rem;color:#2563eb;" onclick='closeModal()'>&times;</div>
+                        <div style="display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+                            <div style="background:#2563eb;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;">
+                                <i class='fas fa-user'></i>
+                            </div>
+                        </div>
+                        <h2 style="margin-top:0;font-size:1.35rem;color:#2563eb;font-weight:700;">Join the Mentorship Waitlist</h2>
+                        <p style="color:#374151;font-size:1.08rem;margin-bottom:18px;">Be the first to know when registration reopens for our exclusive mentorship program!</p>
+                        <label for='waitlistEmail' style="display:block;margin:18px 0 8px 0;font-weight:600;color:#181f2a;">Email address</label>
+                        <div style="position:relative;margin-bottom:12px;">
+                            <input type='email' id='waitlistEmail' placeholder='Enter your email address' style="width:100%;padding:12px 38px 12px 38px;border-radius:8px;border:2px solid #2563eb;font-size:1.08rem;background:#fff;color:#181f2a;box-sizing:border-box;outline:none;">
+                            <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#2563eb;font-size:1.2rem;"><i class='fas fa-envelope'></i></span>
+                        </div>
+                        <div style="text-align:left;margin-bottom:18px;">
+                            <div style="font-weight:600;color:#2563eb;margin-bottom:8px;">What you'll get:</div>
+                            <div style="margin-bottom:6px;color:#2563eb;"><i class='fas fa-check-circle'></i> Priority access when spots open</div>
+                            <div style="margin-bottom:6px;color:#2563eb;"><i class='fas fa-check-circle'></i> Exclusive early-bird discounts</div>
+                            <div style="margin-bottom:6px;color:#2563eb;"><i class='fas fa-check-circle'></i> Program updates and announcements</div>
+                        </div>
+                        <div style="display:flex;gap:12px;justify-content:center;margin-top:18px;">
+                            <button class='cancel-btn' onclick='closeModal()' style="background:#fff;color:#2563eb;padding:10px 22px;border-radius:8px;border:none;font-weight:700;font-size:1rem;cursor:pointer;">Cancel</button>
+                            <button class='join-btn' onclick='joinWaitlist()' style="background:#2563eb;color:#fff;padding:10px 22px;border-radius:8px;border:none;font-weight:700;font-size:1rem;cursor:pointer;display:flex;align-items:center;gap:8px;"><i class='fas fa-envelope'></i> Join Waitlist</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modalBg.style.display = 'block';
+        }
+        function closeModal() {
+            const modalBg = document.getElementById('modalBg');
+            if (modalBg) modalBg.style.display = 'none';
+        }
+        function joinWaitlist() {
+            const email = document.getElementById('waitlistEmail').value;
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            alert('Thank you! You have joined the waitlist. We will notify you when registration opens.');
+            closeModal();
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Hiigsi</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="mentorship.html" class="active">Mentorship</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <section class="mentorship-hero">
+        <h1>Full Forex Mentorship</h1>
+        <p>Noqo Trader kaligiis suuqa ka shaqeysan karo</p>
+        <div class="mentorship-actions">
+            <button class="register-btn" disabled><i class="fas fa-lock"></i> Registration Closed</button>
+            <button class="waitlist-btn" onclick="showWaitlistModal()"><i class="fas fa-user-clock"></i> Join Waitlist</button>
+        </div>
+        <div class="mentorship-stats">
+            <div class="mentorship-stat"><i class="fas fa-clock"></i> <strong>130.3</strong> Hours of Content</div>
+            <div class="mentorship-stat"><i class="fas fa-graduation-cap"></i> Beginner Level</div>
+        </div>
+    </section>
+    <div class="course-image-hero">
+        <img src="images/photoshop.png" alt="Full Stack Software Engineer Mentorship" />
+    </div>
+    <div class="mentorship-features">
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Live Trading</h3>
+            <p>Participate in real-time trading sessions and learn strategies directly from experts.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Flexible Schedule</h3>
+            <p>Access mentorship sessions at times that fit your lifestyle and commitments.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon"><i class="fas fa-handshake"></i></div>
+            <h3>Career Support</h3>
+            <p>Receive guidance and resources to advance your career in trading and finance.</p>
+        </div>
+    </div>
+    
+</body>
+    <footer class="footer" style="background:#fff;box-shadow:0 -2px 8px #2563eb22;margin-top:64px;">
+        <div class="container" style="max-width:1200px;margin:0 auto;padding:32px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:32px;">
+            <div style="flex:1;min-width:220px;">
+                <h3 style="color:#2563eb;margin-bottom:10px;">Hiigsi Academy</h3>
+                <p style="color:#374151;">Empowering learners worldwide with quality education.</p>
+                <div style="margin-top:12px;display:flex;gap:12px;">
+                    <a href="#" style="color:#2563eb;font-size:1.3rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color:#2563eb;font-size:1.3rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color:#2563eb;font-size:1.3rem;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color:#2563eb;font-size:1.3rem;"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div style="flex:1;min-width:180px;">
+                <h3 style="color:#2563eb;margin-bottom:10px;">Quick Links</h3>
+                <ul style="list-style:none;padding:0;margin:0;">
+                    <li><a href="courses.html" style="color:#181f2a;text-decoration:none;">All Courses</a></li>
+                    <li><a href="about.html" style="color:#181f2a;text-decoration:none;">About Us</a></li>
+                    <li><a href="contact.html" style="color:#181f2a;text-decoration:none;">Contact</a></li>
+                    <li><a href="#" style="color:#181f2a;text-decoration:none;">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div style="flex:1;min-width:220px;">
+                <h3 style="color:#2563eb;margin-bottom:10px;">Contact Info</h3>
+                <p style="color:#374151;"><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p style="color:#374151;"><i class="fas fa-envelope"></i> info@zmc10.com</p>
+                <p style="color:#374151;"><i class="fas fa-map-marker-alt"></i> 123 Education St, City, Country</p>
+            </div>
+        </div>
+        <div style="background:#f3f4f6;text-align:center;padding:12px 0;color:#2563eb;font-size:0.98rem;">
+            &copy; 2024 Hiigsi. All rights reserved.
+        </div>
+    </footer>
+</html>
