@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Home Page</title>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+  <a href="index.html" class="logo">Hiigsi </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+       
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Image Background -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-badge"><i class="fas fa-bolt"></i> New Courses Available!</div>
+    <h1>Transform Your Future with Online Learning</h1>
+    <p class="hero-sub">
+      Access world-class education from anywhere. Learn from industry experts and gain valuable skills.
+    </p>
+    <div class="hero-buttons">
+      <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+      <a href="#featured" class="btn btn-secondary">View Featured</a>
+    </div>
+  </header>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <h3 class="counter" data-target="1000">0</h3>
+            <p>Active Students</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="stat-info">
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Expert Teachers</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div class="stat-info">
+            <h3 class="counter" data-target="10">0</h3>
+            <p>Total Courses</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Courses Section -->
+  <section id="featured" class="featured-courses">
+    <div class="container">
+      <h2>Featured Courses</h2>
+      <div class="course-grid">
+            <!-- Course Card 1 -->
+        <div class="course-card">
+          <div class="course-image">
+            <img src="images/hacking.png" alt="Ethical Hacking Course" />
+            <span class="category">Development</span>
+          </div>
+          <div class="course-content">
+            <h3>Ethical Hacking Course</h3>
+            <div class="course-info">
+              <span><i class="fas fa-clock"></i> 4 Hours</span>
+              <span><i class="fas fa-user-graduate"></i> 1.2k Students</span>
+            </div>
+            <div class="course-price">
+              <span class="price">$25</span>
+              <a href="https://wa.me/2526800000" class="btn btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card 2 -->
+        <div class="course-card">
+          <div class="course-image">
+            <img src="images/photoshop.png" alt="Web Development" />
+            <span class="category">Design</span>
+          </div>
+          <div class="course-content">
+            <h3>Complete Photoshop Course</h3>
+            <div class="course-info">
+              <span><i class="fas fa-clock"></i> 5 Hours</span>
+              <span><i class="fas fa-user-graduate"></i> 1.1k Students</span>
+            </div>
+            <div class="course-price">
+              <span class="price">$30</span>
+              <a href="https://wa.me/2526800000" class="btn btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Expert Instructors</h3>
+          <p>Learn from industry professionals with years of experience.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-certificate"></i>
+          <h3>Certified Courses</h3>
+          <p>Earn valuable certificates upon course completion.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-clock"></i>
+          <h3>Flexible Learning</h3>
+          <p>Study at your own pace, anywhere, anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <h2 class="testimonial-title"><i class="fas fa-quote-left"></i> What Our Learners Say</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <img src="images/user.jpg" alt="User" class="testimonial-avatar" />
+          <div class="testimonial-quote">“This platform changed my life! The courses are top-notch and the instructors are amazing.”</div>
+          <div class="testimonial-name">Sarah M.</div>
+          <div class="testimonial-role">Web Developer</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/user.jpg" alt="User" class="testimonial-avatar" />
+          <div class="testimonial-quote">“I landed my dream job after completing the mentorship program. Highly recommended!”</div>
+          <div class="testimonial-name">James K.</div>
+          <div class="testimonial-role">Data Scientist</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/user.jpg" alt="User" class="testimonial-avatar" />
+          <div class="testimonial-quote">“The flexible learning schedule allowed me to study while working full-time. Thank you!”</div>
+          <div class="testimonial-name">Aisha T.</div>
+          <div class="testimonial-role">UI/UX Designer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Hiigsi Academy</h3>
+          <p>Empowering learners worldwide with quality education.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="courses.html">All Courses</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-phone"></i> +252 615000000</p>
+          <p><i class="fas fa-envelope"></i> info@edutech.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Mogadishu, Somalia</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hiigsi Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

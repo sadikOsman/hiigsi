@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EduTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/courses.css">
+</head>
+<body>
+    <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Hiigsi</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+       
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav> <!-- Navigation -->
+   
+
+    <!-- Courses Header -->
+    <header class="courses-header">
+        <div class="container">
+            <h1>Discover Your Perfect Course</h1>
+            <p>Choose from over 1000+ online courses with new additions published every month</p>
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for courses...">
+                </div>
+                <div class="filter-group">
+                    <select>
+                        <option value="">Category</option>
+                        <option value="development">Development</option>
+                        <option value="design">Design</option>
+                        <option value="business">Business</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="marketing">Hacking</option>
+                    </select>
+                    <select>
+                        <option value="">Level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <select>
+                        <option value="">Price</option>
+                        <option value="free">Free</option>
+                        <option value="paid">Paid</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popular Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="icon">
+                        <img src="images/hacking.png" alt="hacking" class="category-img">
+                    </div>
+                    <h3>Ethical Hacking</h3>
+                    <p>1 Course</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon">
+                        <img src="images/photoshop.png" alt="photoshop" class="category-img">
+                    </div>
+                    <h3>Photoshop</h3>
+                    <p>1 Course</p>
+                </div>
+                <div class="category-card">
+                    <div class="icon">
+                        <img src="images/webdev.jpg" alt="webdev" class="category-img">
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>1 Course</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <div class="view-options">
+                    <button class="active"><i class="fas fa-th-large"></i> Grid</button>
+                    <button><i class="fas fa-list"></i> List</button>
+                </div>
+            </div>
+            <div class="courses-grid">
+                <!-- Web Development Course -->
+                <div class="course-card" data-id="webdev-2024" onclick="window.location.href='webdev.html'">
+                    <div class="course-image">
+                        <img src="images/webdev.jpg" alt="Web Development">
+                        <div class="course-tag">New</div>
+                        <div class="course-overlay">
+                            <div class="overlay-content">
+                                <h4>Course Overview</h4>
+                                <p>Become a professional web developer by learning HTML, CSS, JavaScript, and modern frameworks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="category">Development</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.9 (2.1k)
+                            </span>
+                        </div>
+                        <h3>Web Development Masterclass 2024</h3>
+                        <div class="course-details">
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>6 Hours</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-video"></i>
+                                <span>30 Lectures</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-signal"></i>
+                                <span>Beginner–Advanced</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <img src="images/user.jpg" alt="Instructor">
+                                <span>Farax Ali</span>
+                            </div>
+                            <div class="price">
+                                <span class="original">$40</span>
+                                <span class="discounted">$20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ethical Hacking Course -->
+                <div class="course-card" data-id="web-dev-2024" onclick="window.location.href='hacking.html'">
+                    <div class="course-image">
+                        <img src="images/hacking.png" alt="hacking">
+                        <div class="course-tag">Bestseller</div>
+                        <div class="course-overlay">
+                            <div class="overlay-content">
+                                <h4>Course Overview</h4>
+                                <p>Master Ethical Hacking — Understand Attacks and Learn to Defend Yourself and Others</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="category">Hacking</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.8 (200)
+                            </span>
+                        </div>
+                        <h3>Complete Ethical Hacking Course</h3>
+                        <div class="course-details">
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>4 Hours</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-video"></i>
+                                <span>30 Lectures</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-signal"></i>
+                                <span>All Levels</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <img src="images/user.jpg" alt="Instructor">
+                                <span>Sadik Osman</span>
+                            </div>
+                            <div class="price">
+                                <span class="original">$50</span>
+                                <span class="discounted">$25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photoshop Design Course -->
+                <div class="course-card" data-id="photoshop-2024" onclick="window.location.href='photoshop.html'">
+                    <div class="course-image">
+                        <img src="images/photoshop.png" alt="Photoshop Design">
+                        <div class="course-tag">Bestseller</div>
+                        <div class="course-overlay">
+                            <div class="overlay-content">
+                                <h4>Course Overview</h4>
+                                <p>Learn professional Photoshop techniques for photo editing, design, and creative projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="category">Design</span>
+                            <span class="rating">
+                                <i class="fas fa-star"></i> 4.9 (2.1k)
+                            </span>
+                        </div>
+                        <h3>Photoshop Masterclass 2024</h3>
+                        <div class="course-details">
+                            <div class="detail">
+                                <i class="fas fa-clock"></i>
+                                <span>6 Hours</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-video"></i>
+                                <span>30 Lectures</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-signal"></i>
+                                <span>Beginner–Advanced</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <img src="images/user.jpg" alt="Instructor">
+                                <span>Ahmed Abdi</span>
+                            </div>
+                            <div class="price">
+                                <span class="original">$60</span>
+                                <span class="discounted">$30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Hiigsi Academy</h3>
+            <p>Empowering learners worldwide with quality education.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="courses.html">All Courses</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-phone"></i> +252 615000000</p>
+            <p><i class="fas fa-envelope"></i> info@edutech.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Mogadishu, Somalia</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Hiigsi Academy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
