@@ -334,16 +334,36 @@
             const modalBg = document.getElementById('modalBg');
             if (modalBg) modalBg.style.display = 'none';
         }
-        function joinWaitlist() {
-            const email = document.getElementById('waitlistEmail').value;
+  
+        async function joinWaitlist() {
+            const email = document.getElementById('waitlistEmail').value.trim();
+
             if (!email || !email.includes('@')) {
                 alert('Please enter a valid email address.');
                 return;
             }
-            alert('Thank you! You have joined the waitlist. We will notify you when registration opens.');
-            closeModal();
-        }
-    </script>
+
+            const formData = new FormData();
+            formData.append("email", email);
+
+            try {
+                await fetch("https://script.google.com/macros/s/AKfycbxD2Ze0dWUwnQeWXTclNzQzXiAbXt_NtQ4IxWXiF3rs4FiZrSNrMluiuefppHnsZFDtbQ/exec", {
+                method: "POST",
+                body: formData
+                });
+
+                alert("✅ Thank you! You have joined the waitlist.");
+                closeModal();
+            } catch (err) {
+                console.error(err);
+                alert("❌ Something went wrong. Please try again later.");
+            }
+            }
+
+
+
+        </script>
+
 </head>
 <body>
     <nav class="navbar">
